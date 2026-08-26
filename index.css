@@ -44,7 +44,7 @@ nav a:hover {
 
 /*cambio en projects de color de menu de nav*/
 nav.projects-nav a, footer.projects-footer  {
-    color: white;
+    color: var(--primary);
 }
 
 .section {
@@ -105,6 +105,49 @@ nav.projects-nav a, footer.projects-footer  {
     color: #e8a0bf;
     font-family: "Inter", sans-serif;
     font-weight: 900;
+}
+
+#section3{
+    background-color: var(--secundary);
+    color: #e8a0bf;
+}
+.projects-content h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 9rem);
+    line-height: 0.8;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.projects-content{
+    width: 90%;
+    max-width: 1200px;
+}
+
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    margin-top: 40px;
+}
+
+.project-card{
+    background-color: #e8a0bf;
+    padding: 1vw;
+    min-width: 10vw;
+    border-radius: 1vw;
+    padding: 2vw;
+    color: var(--secundary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3{
+    font-family: "Inter", sans-serif;;
 }
 
 
