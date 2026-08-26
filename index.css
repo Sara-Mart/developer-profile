@@ -49,9 +49,12 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-h1 {
+#section1{
+    background-color: #e8a0bf;
+}
+#section1 h1 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
     text-align: center;
