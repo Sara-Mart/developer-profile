@@ -65,6 +65,18 @@ nav a:hover {
    
 }
 
+/*CONTENIDO SECTION ABOUT*/
+
+.about-content{
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
 footer {
     position: fixed;
     bottom: 0;
