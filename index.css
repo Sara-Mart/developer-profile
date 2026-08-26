@@ -75,9 +75,20 @@ nav a:hover {
     flex-direction: column;
     gap: 30px;
 }
-.about-content img{
-    width: 20vw;
+#section2 h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-align: center;
     
+    line-height: 0.8;
+    width: 100%;
+    white-space: nowrap;
+   
+}
+.colorprimary{
+    color: #e8a0bf;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
 }
 
 
