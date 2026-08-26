@@ -68,12 +68,23 @@ nav a:hover {
 /*CONTENIDO SECTION ABOUT*/
 
 .about-content{
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1200px;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.info-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.info-cards .card{
+    background-color: #f4b6d1a8;
+    padding: 5vw;
+    border-radius: 1vw;
 }
 #section2 h1 {
     font-family: "Inter", sans-serif;
