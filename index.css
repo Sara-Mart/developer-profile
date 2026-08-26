@@ -171,6 +171,53 @@ nav.projects-nav a, footer.projects-footer  {
    background-color: #f2dbe5;
 }
 
+#section4{
+    background-color: #e8a0bf;
+}
+
+.contact-content{
+    width: 90%;
+    max-width: 1200px;
+}
+
+.contact-content h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 9rem);
+    line-height: 0.8;
+    width: 100%;
+    white-space: nowrap;
+}
+.contact-content p{
+    text-align: center;
+}
+.contact-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    margin-top: 40px;
+}
+
+.contact-card{
+    background-color: #f4b6d1a8;
+    padding: 1vw;
+    min-width: 10vw;
+    border-radius: 1vw;
+    padding: 2vw;
+    color: var(--secundary);
+
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+}
+
+.contact-card h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+
+}
 
 footer {
     position: fixed;
