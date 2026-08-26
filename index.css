@@ -75,6 +75,11 @@ nav a:hover {
     flex-direction: column;
     gap: 30px;
 }
+.about-content img{
+    width: 20vw;
+    display: block;
+    margin: 0 auto;
+}
 
 
 footer {
