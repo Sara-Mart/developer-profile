@@ -188,6 +188,7 @@ nav.projects-nav a, footer.projects-footer  {
     line-height: 0.8;
     width: 100%;
     white-space: nowrap;
+    margin-top: 30px;
 }
 .contact-content p{
     text-align: center;
@@ -215,7 +216,13 @@ nav.projects-nav a, footer.projects-footer  {
 .contact-card h2{
     font-family: "Inter", sans-serif;
     font-weight: 900;
+    font-size: 2vw;
 
+}
+.contact-card p{
+    font-size: 13px;
+    overflow-wrap:anywhere;
+    word-break:break-word;
 }
 
 /*FORMULARIO DE CONTACTO*/
