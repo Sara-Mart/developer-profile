@@ -42,6 +42,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/*cambio en projects de color de menu de nav*/
+nav.projects-nav a, footer.projects-footer  {
+    color: white;
+}
+
 .section {
     width: 100%;
     min-height: 100vh;
