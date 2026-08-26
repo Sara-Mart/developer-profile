@@ -16,7 +16,20 @@
 body{
     background-color: #e8a0bf;
 }
-
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: var(--secundary);
+}
+nav a:hover{
+    text-decoration: underline;
+}
 h1{
     font-family:"Inter", sans-serif;
     font-weight: 900;
