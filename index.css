@@ -3,8 +3,8 @@
 
 :root {
     --primary: #e8a0bf;
-    --secundary: rgb(0, 0, 0);
-    --terciary: #ffffff;
+    --secondary: rgb(0, 0, 0);
+    --tertiary: #ffffff;
 }
 
 * {
