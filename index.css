@@ -1,21 +1,48 @@
+/* =========================================================
+   1. FUENTES
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* =========================================================
+   2. VARIABLES
+   ========================================================= */
+
 :root {
     --primary: #e8a0bf;
-    --secondary: rgb(0, 0, 0);
+    --secondary: #000000;
     --tertiary: #ffffff;
+
+    --card-background: #f4b6d1a8;
+    --hover-background: #f2dbe5;
+
+    --border-radius: 1rem;
+    --content-width: 1200px;
 }
+
+
+/* =========================================================
+   3. RESET Y ESTILOS GENERALES
+   ========================================================= */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
     font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 body {
     background-color: var(--tertiary);
 }
+
+
+/* =========================================================
+   4. NAVEGACIÓN
+   ========================================================= */
 
 nav {
     position: fixed;
@@ -30,11 +57,12 @@ nav {
     align-items: center;
 
     padding: 1rem;
-    z-index: 1000;
 
     background-color: #e8a0bfac;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+
+    z-index: 1000;
 }
 
 nav a {
@@ -43,17 +71,24 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #f2dbe5;
-    color: #e8a0bf;
+    background-color: var(--hover-background);
+    color: var(--primary);
     font-weight: 900;
+
     padding: 0.5rem;
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
 }
 
-/*cambio en projects de color de menu de nav*/
-nav.projects-nav a, footer.projects-footer  {
+/* Cambia el color del menú cuando estamos en Projects */
+nav.projects-nav a,
+footer.projects-footer {
     color: var(--primary);
 }
+
+
+/* =========================================================
+   5. ESTRUCTURA GENERAL DE LAS SECCIONES
+   ========================================================= */
 
 .section {
     width: 100%;
@@ -62,254 +97,384 @@ nav.projects-nav a, footer.projects-footer  {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6rem 1rem 5rem;
 
-    
+    padding: 6rem 1rem 5rem;
 }
-#section1{
-    background-color: #e8a0bf;
+
+
+/* =========================================================
+   6. SECCIÓN HOME
+   ========================================================= */
+
+#section1 {
+    background-color: var(--primary);
 }
+
 #section1 h1 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
+
     text-align: center;
+
     font-size: clamp(4rem, 17vw, 18rem);
     line-height: 0.8;
+
     width: 100%;
+
     white-space: nowrap;
-   
 }
 
-/*CONTENIDO SECTION ABOUT*/
 
-.about-content{
+/* =========================================================
+   7. SECCIÓN ABOUT
+   ========================================================= */
+
+.about-content {
     width: 90%;
-    max-width: 1200px;
-    text-align: center;
+    max-width: var(--content-width);
+
     display: flex;
     flex-direction: column;
+
     gap: 30px;
+
+    text-align: center;
 }
-.info-cards{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
-}
-.info-cards .card{
-    background-color: #f4b6d1a8;
-    padding: 2rem;
-    border-radius: 1vw;
-}
+
 #section2 h1 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
+
     text-align: center;
-    
+
     line-height: 0.8;
+
     width: 100%;
+
     white-space: nowrap;
-   
 }
-.colorprimary{
-    color: #e8a0bf;
+
+/* Texto destacado con el color principal */
+.colorprimary {
+    color: var(--primary);
+
     font-family: "Inter", sans-serif;
     font-weight: 900;
 }
 
-#section3{
-    background-color: var(--secondary);
-    color: #e8a0bf;
+
+/* =========================================================
+   8. TARJETAS DE INFORMACIÓN
+   ========================================================= */
+
+.info-cards {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 1.25rem;
 }
-.projects-content h2{
+
+.info-cards .card {
+    background-color: var(--card-background);
+
+    padding: 2rem;
+
+    border-radius: var(--border-radius);
+}
+
+
+/* =========================================================
+   9. SECCIÓN PROJECTS
+   ========================================================= */
+
+#section3 {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.projects-content {
+    width: 90%;
+    max-width: var(--content-width);
+}
+
+.projects-content h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
+
     text-align: center;
+
     font-size: clamp(2rem, 8vw, 9rem);
     line-height: 0.8;
+
     width: 100%;
+
     white-space: nowrap;
 }
 
-.projects-content{
-    width: 90%;
-    max-width: 1200px;
-}
 
-.project-cards{
+/* =========================================================
+   10. TARJETAS DE PROYECTOS
+   ========================================================= */
+
+.project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:1.25rem;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 1.25rem;
+
     margin-top: 40px;
 }
 
-.project-card{
-    background-color: #e8a0bf;
-    padding: 1rem;
-    min-width: 10vw;
-    border-radius: 1rem;
+.project-card {
+    background-color: var(--primary);
     color: var(--secondary);
+
+    min-width: 10vw;
+
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.project-card h3{
+.project-card h3 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
 }
 
-.project-card p{
+.project-card p {
     margin-bottom: 2rem;
 }
 
-.project-card a{
-    text-decoration: none;
-    background-color: var(--secondary);
-    color: #e8a0bf;
-    text-align: center;
-    border-radius: 1rem;
+.project-card a {
+    width: 100%;
+
     padding: 1rem;
-    width:100%;
-    
-}
-.project-card a:hover{
-   font-weight: 900;
-   color: var(--primary);
-   background-color: #f2dbe5;
+
+    background-color: var(--secondary);
+    color: var(--primary);
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: var(--border-radius);
 }
 
-#section4{
-    background-color: #e8a0bf;
+.project-card a:hover {
+    background-color: var(--hover-background);
+    color: var(--primary);
+    font-weight: 900;
 }
 
-.contact-content{
+
+/* =========================================================
+   11. SECCIÓN CONTACT
+   ========================================================= */
+
+#section4 {
+    background-color: var(--primary);
+}
+
+.contact-content {
     width: 90%;
-    max-width: 1200px;
+    max-width: var(--content-width);
+
     margin: 0 auto;
 }
 
-.contact-content h1{
+.contact-content h1 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
+
     text-align: center;
+
     font-size: clamp(2rem, 8vw, 9rem);
     line-height: 0.8;
+
     width: 100%;
-    white-space: nowrap;
+
     margin-top: 30px;
+
+    white-space: nowrap;
 }
-.contact-content p{
+
+.contact-content p {
     text-align: center;
 }
-.contact-cards{
+
+
+/* =========================================================
+   12. TARJETAS DE CONTACTO
+   ========================================================= */
+
+.contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:1.25rem;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 1.25rem;
+
     margin-top: 40px;
 }
 
-.contact-card{
-    background-color: #f4b6d1a8;
-    min-width: 5rem;
-    border-radius: 1rem;
-    padding: 1rem;
+.contact-card {
+    background-color: var(--card-background);
     color: var(--secondary);
+
+    min-width: 5rem;
+
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
 
     display: flex;
     flex-direction: column;
-    
+
     text-align: center;
 }
 
-.contact-card h2{
+.contact-card h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
+
     font-size: 1rem;
-
 }
-.contact-card p{
+
+.contact-card p {
     font-size: 13px;
-    overflow-wrap:anywhere;
-    word-break:break-word;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
-/*FORMULARIO DE CONTACTO*/
-form{
+
+/* =========================================================
+   13. FORMULARIO DE CONTACTO
+   ========================================================= */
+
+form {
     width: 90%;
     max-width: 800px;
+
     margin: 10px auto 0;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   
-    
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+
     margin-bottom: 1rem;
 }
 
 .form-group label {
     margin-bottom: 1rem;
+
     font-family: "Inter", sans-serif;
     font-weight: 900;
 }
 
 .form-group input,
 .form-group textarea {
+    width: 80%;
+
     padding: 1rem;
+
     border: 1px solid #ccc;
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
+
     font-family: inherit;
     font-size: 1rem;
-    width: 80%;
 }
 
 .form-group textarea {
     resize: vertical;
 }
 
+
+/* =========================================================
+   14. BOTÓN
+   ========================================================= */
+
 button {
-    
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    background-color: var(--secondary);
-    color: #e8a0bf;
     width: 200px;
     height: 50px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
-button:hover{
+button:hover {
+    background-color: var(--hover-background);
+    color: var(--primary);
 
     font-weight: 900;
-    color: var(--primary);
-    background-color: #f2dbe5;
-
 }
+
+
+/* =========================================================
+   15. FOOTER
+   ========================================================= */
 
 footer {
     position: fixed;
+
     bottom: 0;
     left: 0;
 
     width: 100%;
 
+    min-height: 60px;
+
+    padding: 1rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    min-height: 60px;
-    padding: 1rem;
-
     z-index: 1000;
 }
 
+
+/* =========================================================
+   16. RESPONSIVE - MÓVIL
+   ========================================================= */
+
 @media (max-width: 768px) {
+
+    /*
+     * En pantallas pequeñas permitimos que
+     * los títulos ocupen varias líneas.
+     */
+
     #section1 h1,
     #section2 h1,
     .projects-content h2,
@@ -317,4 +482,4 @@ footer {
         white-space: normal;
     }
 
- } 
+}
