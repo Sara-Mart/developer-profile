@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--terciary);
+    background-color: var(--tertiary);
 }
 
 nav {
@@ -30,12 +30,13 @@ nav {
     justify-content: space-around;
     align-items: center;
 
+    padding: 1rem;
     z-index: 1000;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--secundary);
+    color: var(--secondary);
 }
 
 nav a:hover {
@@ -49,11 +50,13 @@ nav.projects-nav a, footer.projects-footer  {
 
 .section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100svh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 6rem 1rem 5rem;
+
     
 }
 #section1{
@@ -226,29 +229,29 @@ nav.projects-nav a, footer.projects-footer  {
 
 /*FORMULARIO DE CONTACTO*/
 form{
-    margin-top: 10px;
+    margin-top: 1rem;
     max-width: 500px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
     font-family: "Inter", sans-serif;
     font-weight: 900;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 12px;
+    padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 1rem;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .form-group textarea {
@@ -284,7 +287,8 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px;
+    min-height: 60px;
+    padding: 1rem;
 
     z-index: 1000;
 }
@@ -296,4 +300,5 @@ footer {
     .contact-content h1 {
         white-space: normal;
     }
-}
+
+ } 
