@@ -31,6 +31,10 @@ nav {
 
     padding: 1rem;
     z-index: 1000;
+
+    background-color: #e8a0bfac;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 nav a {
